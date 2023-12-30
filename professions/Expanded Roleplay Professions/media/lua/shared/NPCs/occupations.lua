@@ -7,11 +7,20 @@
 ProfessionFramework.AlwaysUseStartingKits = false
 
 local addProfession = ProfessionFramework.addProfession
+local addTrait = ProfessionFramework.addTrait
+
+addTrait("FastLearner2", {
+    name = "UI_trait_FastLearner",
+    description = "UI_trait_FastLearnerDesc",
+    profession = true,
+    exclude = {"FastLearner", "SlowLearner"},
+    swap = "FastLearner",
+})
 
 addProfession('teacher', {
     name = "UI_prof_teacher",
     icon = "prof_teacher",
-    cost = -6,
+    cost = -8,
     xp = {
         [Perks.Woodwork] = 1,
         [Perks.Cooking] = 1,
@@ -19,35 +28,52 @@ addProfession('teacher', {
         [Perks.MetalWelding] = 1,
         [Perks.Mechanics] = 1,
         [Perks.Tailoring] = 1,
-        [Perks.Sprinting] = 4,
         [Perks.Maintenance] = 2,
         [Perks.Doctor] = 3,
     },
-    traits = {"FastLearner"},
+    traits = {"FastLearner2"},
+})
+
+addTrait("ThickSkinned2", {
+    name = "UI_trait_thickskinned",
+    description = "UI_trait_thickskinneddesc",
+    profession = true,
+    exclude = {"Thinskinned", "ThickSkinned"},
+    swap = "ThickSkinned",
 })
 
 addProfession('seamstress', {
     name = "UI_prof_seamstress",
     icon = "prof_seamstress",
-    cost = -6,
+    cost = -2,
     xp = {
         [Perks.Tailoring] = 6,
         [Perks.SmallBlade] = 2,
         [Perks.Maintenance] = 2,
     },
-    recipes = {"Make Cake Batter", "Make Pie Dough", "Make Bread Dough"},
-    traits = {"ThickSkinned"},
-    clothing = {
-        Hat = {"Base.Hat_ChefHat"},
-        TorsoExtra = {"Base.Apron_White", "Base.Apron_Black"},
-        Shoes =  {"Base.Shoes_ArmyBoots", "Base.Shoes_ArmyBootsDesert", "Base.Shoes_BlackBoots"},
-    },
+    traits = {"ThickSkinned2"},
+})
+
+addTrait("ProneToIllness2", {
+    name = "UI_trait_pronetoillness",
+    description = "UI_trait_pronetoillnessdesc",
+    profession = true,
+    exclude = {"ProneToIllness", "Resilient"},
+    swap = "ProneToIllness",
+})
+
+addTrait("SlowHealer2", {
+    name = "UI_trait_SlowHealer",
+    description = "UI_trait_SlowHealerDesc",
+    profession = true,
+    exclude = {"FastHealer", "SlowHealer"},
+    swap = "SlowHealer",
 })
 
 addProfession('retired', {
     name = "UI_prof_retired",
     icon = "prof_retired",
-    cost = -4,
+    cost = 2,
     xp = {
         [Perks.Fitness] = -1,
         [Perks.Strength] = -1,
@@ -58,29 +84,37 @@ addProfession('retired', {
         [Perks.PlantScavenging] = 3,
     },
     recipes = {"Make Cake Batter", "Make Pie Dough", "Make Bread Dough"},
-    traits = {"ProneToIllness", "SlowHealer"},
+    traits = {"ProneToIllness2", "SlowHealer2"},
     clothing = {
         FullTop = {"Base.Dungarees"},
     },
 })
 
+addTrait("Graceful2", {
+    name = "UI_trait_graceful",
+    description = "UI_trait_gracefuldesc",
+    profession = true,
+    exclude = {"Graceful", "Clumsy"},
+    swap = "Graceful",
+})
+
 addProfession('musician', {
     name = "UI_prof_musician",
     icon = "prof_musician",
-    cost = -6,
+    cost = -2,
     xp = {
         [Perks.Electricity] = 2,
         [Perks.Music] = 7,
         [Perks.Nimble] = 3,
         [Perks.Dancing] = 6,
     },
-    traits = {"Graceful"},
+    traits = {"Graceful2"},
 })
 
 addProfession('bartender', {
     name = "UI_prof_bartender",
     icon = "prof_bartender",
-    cost = -4,
+    cost = -2,
     xp = {
         [Perks.Cooking] = 3,
         [Perks.Maintenance] = 4,
@@ -90,3 +124,29 @@ addProfession('bartender', {
     },
 })
 
+
+addProfession('model', {
+    name = "UI_prof_model",
+    icon = "prof_model",
+    cost = -4,
+    xp = {
+        [Perks.Fitness] = 2,
+        [Perks.Nimble] = 4,
+        [Perks.Lightfoot] = 4,
+        [Perks.Dancing] = 2,
+    },
+    traits = {"Nutritionist2"},
+})
+
+addProfession('gamer', {
+    name = "UI_prof_gamer",
+    icon = "prof_gamer",
+    cost = 2,
+    xp = {
+        [Perks.Fitness] = -1,
+        [Perks.Electricity] = 4,
+        [Perks.Sneaking] = 3,
+        [Perks.Aiming] = 2,
+    },
+    traits = {"NightOwl"},
+})

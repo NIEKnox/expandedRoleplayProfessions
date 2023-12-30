@@ -1,0 +1,22 @@
+UI_EN = {
+    UI_prof_teacher = "Teacher",
+    UI_profdesc_teacher = "Skilled in teaching a wide variety of disciplines. <br>Learns faster than most.",
+
+    UI_prof_seamstress = "Seamstress",
+    UI_profdesc_seamstress = "Knows how to repair most clothing. Your hands are tougher than most. <br>Starts with a variety of clothing recipes unlocked.",
+
+    UI_prof_retired = "Retired",
+    UI_profdesc_retired = "Enjoying retirement. <br>Starts with more skills, but is less physically fit.",
+
+    UI_prof_musician = "Musician",
+    UI_profdesc_musician = "A talented musician and performer who knows how to move it. <br>Starts with songs learned.",
+
+    UI_prof_bartender = "Bartender",
+    UI_profdesc_bartender = "Someone used to running a bar, and kicking out rowdy customers. <br>Starts with alcohol recipes learned.",
+
+    UI_prof_model = "Model",
+    UI_profdesc_model = "A professional model who knows how to make themselves look good.",
+
+    UI_prof_gamer = "Gamer",
+    UI_profdesc_gamer = "No grass. Ever. <br>Great at staying awake.",
+}

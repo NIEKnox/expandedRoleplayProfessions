@@ -1,5 +1,3 @@
-name=expandedRoleplayProfessions
-id=???
-description=???
+name=Expanded Roleplay Professions
+id=expandedRoleplayProfessions
 require=ProfessionFramework
-poster=poster.png
